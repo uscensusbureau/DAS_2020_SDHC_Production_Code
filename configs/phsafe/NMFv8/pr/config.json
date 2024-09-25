@@ -1,0 +1,81 @@
+{
+    "privacy_budget": {
+        "PH1_num": {
+            "usa_A-G": 0.0,
+            "usa_H,I": 0.0,
+            "usa_*": 0.0,
+            "state_A-G": 0.141622,
+            "state_H,I": 0.016371,
+            "state_*": 0.016371
+        },
+        "PH1_denom": {
+            "usa_A-G": 0.0,
+            "usa_H,I": 0.0,
+            "usa_*": 0.0,
+            "state_A-G": 0.001170,
+            "state_H,I": 0.000135,
+            "state_*": 0.000135
+        },
+        "PH2": {
+            "usa_*": 0.0,
+            "state_*": 0.016371
+        },
+        "PH3": {
+            "usa_A-G": 0.0,
+            "usa_H,I": 0.0,
+            "usa_*": 0.0,
+            "state_A-G": 0.662976,
+            "state_H,I": 0.006630,
+            "state_*": 0.006630
+        },
+        "PH4": {
+            "usa_A-G": 0.0,
+            "usa_H,I": 0.0,
+            "usa_*": 0.0,
+            "state_A-G": 0.141622,
+            "state_H,I": 0.016371,
+            "state_*": 0.016371
+        },
+        "PH5_denom": {
+            "usa_A-G": 0.0,
+            "usa_H,I": 0.0,
+            "usa_*": 0.0,
+            "state_A-G": 0.001170,
+            "state_H,I": 0.000135,
+            "state_*": 0.000135
+        },
+        "PH6": {
+            "usa_*": 0.0,
+            "state_*": 0.006630
+        },
+        "PH7": {
+            "usa_A-G": 0.0,
+            "usa_H,I": 0.0,
+            "usa_*": 0.0,
+            "state_A-G": 0.141622,
+            "state_H,I": 0.016371,
+            "state_*": 0.016371
+        },
+        "PH8_denom": {
+            "usa_A-G": 0.0,
+            "usa_H,I": 0.0,
+            "usa_*": 0.0,
+            "state_A-G": 0.001170,
+            "state_H,I": 0.000135,
+            "state_*": 0.000135
+        }
+    },
+    "tau": {
+        "PH1_num": 10,
+        "PH2": 10,
+        "PH3": 6,
+        "PH4": 10,
+        "PH6": 6,
+        "PH7": 10
+    },
+    "state_filter": [
+        "72"
+    ],
+    "reader": "cef",
+    "privacy_defn": "zcdp"
+}

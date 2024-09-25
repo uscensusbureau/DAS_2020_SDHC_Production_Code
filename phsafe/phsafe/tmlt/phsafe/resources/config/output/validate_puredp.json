@@ -1,0 +1,47 @@
+{
+    "PH1_num": {
+        "budget": "PH1_num",
+        "*": "dp_standard"
+    },
+    "PH1_denom": {
+        "budget": "PH1_denom",
+        "*": "dp_denom"
+    },
+    "PH2": {
+        "budget": "PH2",
+        "*": "dp_standard"
+    },
+    "PH3": {
+        "budget": "PH3",
+        "*": "dp_standard"
+    },
+    "PH4": {
+        "budget": "PH4",
+        "*": "dp_standard"
+    },
+    "PH5_num": {
+        "budget": "PH4",
+        "*": "dp_standard"
+    },
+    "PH5_denom": {
+        "budget": "PH5_denom",
+        "*": "dp_denom"
+    },
+    "PH6": {
+        "budget": "PH6",
+        "*": "dp_standard"
+    },
+    "PH7": {
+        "budget": "PH7",
+        "*": "dp_standard"
+    },
+    "PH8_num": {
+        "budget": "PH7",
+        "2": "dp_double",
+        "3": "dp_standard"
+    },
+    "PH8_denom": {
+        "budget": "PH8_denom",
+        "*": "dp_denom"
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "privacy_budget": {
+        "PH1_num": {
+                "usa_A-G": Infinity,
+                "usa_H,I": Infinity,
+                "usa_*": Infinity,
+                "state_A-G": Infinity,
+                "state_H,I": Infinity,
+                "state_*": Infinity
+        },
+        "PH1_denom": {
+                "usa_A-G": Infinity,
+                "usa_H,I": Infinity,
+                "usa_*": Infinity,
+                "state_A-G": Infinity,
+                "state_H,I": Infinity,
+                "state_*": Infinity
+        },
+        "PH2": {
+                "usa_*": Infinity,
+                "state_*": Infinity
+        },
+        "PH3":  {
+                "usa_A-G": Infinity,
+                "usa_H,I": Infinity,
+                "usa_*": Infinity,
+                "state_A-G": Infinity,
+                "state_H,I": Infinity,
+                "state_*": Infinity
+        },
+        "PH4":  {
+                "usa_A-G": Infinity,
+                "usa_H,I": Infinity,
+                "usa_*": Infinity,
+                "state_A-G": Infinity,
+                "state_H,I": Infinity,
+                "state_*": Infinity
+        },
+        "PH5_denom": {
+                "usa_A-G": Infinity,
+                "usa_H,I": Infinity,
+                "usa_*": Infinity,
+                "state_A-G": Infinity,
+                "state_H,I": Infinity,
+                "state_*": Infinity
+        },
+        "PH6": {
+                "usa_*": Infinity,
+                "state_*": Infinity
+        },
+        "PH7": {
+                "usa_A-G": Infinity,
+                "usa_H,I": Infinity,
+                "usa_*": Infinity,
+                "state_A-G": Infinity,
+                "state_H,I": Infinity,
+                "state_*": Infinity
+        },
+        "PH8_denom": {
+                "usa_A-G": Infinity,
+                "usa_H,I": Infinity,
+                "usa_*": Infinity,
+                "state_A-G": Infinity,
+                "state_H,I": Infinity,
+                "state_*": Infinity
+        }
+    },
+    "tau": {
+            "PH1_num": 5,
+            "PH2": 10,
+            "PH3": 5,
+            "PH4": 5,
+            "PH6": 5,
+            "PH7": 5
+    },
+    "state_filter": [
+        "06"
+    ],
+    "reader": "csv",
+    "privacy_defn": "puredp"
+}

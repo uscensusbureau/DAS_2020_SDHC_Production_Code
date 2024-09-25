@@ -1,0 +1,92 @@
+{
+    "marshalled": true,
+    "class": "tmlt.common.configuration.Config",
+    "init_params": {
+        "attributes": [
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.Unrestricted",
+                "init_params": {
+                    "column": "REGION_ID",
+                    "pattern": "1|\\d{2}$"
+                }
+            },
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.CategoricalStr",
+                "init_params": {
+                    "column": "REGION_TYPE",
+                    "values": [
+                        "USA",
+                        "STATE"
+                    ]
+                }
+            },
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.CategoricalStr",
+                "init_params": {
+                    "column": "ITERATION_CODE",
+                    "values": [
+                        "*",
+                        "A",
+                        "B",
+                        "C",
+                        "D",
+                        "E",
+                        "F",
+                        "G",
+                        "H",
+                        "I"
+                    ]
+                }
+            },
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.CategoricalInt",
+                "init_params": {
+                    "column": "PH3_DATA_CELL",
+                    "values": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10
+                    ]
+                }
+            },
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.Unrestricted",
+                "init_params": {
+                    "column": "COUNT",
+                    "pattern": "-?\\d+$"
+                }
+            },
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.CategoricalStr",
+                "init_params": {
+                    "column": "NOISE_DISTRIBUTION",
+                    "values": [
+                        "Discrete Gaussian",
+                        "Two-Sided Geometric"
+                    ]
+                }
+            },
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.Unrestricted",
+                "init_params": {
+                    "column": "VARIANCE",
+                    "pattern": "\\d+(\\.\\d+)?$"
+                }
+            }
+        ]
+    }
+}

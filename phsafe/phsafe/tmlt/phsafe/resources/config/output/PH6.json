@@ -1,0 +1,84 @@
+{
+    "marshalled": true,
+    "class": "tmlt.common.configuration.Config",
+    "init_params": {
+        "attributes": [
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.Unrestricted",
+                "init_params": {
+                    "column": "REGION_ID",
+                    "pattern": "1|\\d{2}$"
+                }
+            },
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.CategoricalStr",
+                "init_params": {
+                    "column": "REGION_TYPE",
+                    "values": [
+                        "USA",
+                        "STATE"
+                    ]
+                }
+            },
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.CategoricalInt",
+                "init_params": {
+                    "column": "PH6_DATA_CELL",
+                    "values": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21
+                    ]
+                }
+            },
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.Unrestricted",
+                "init_params": {
+                    "column": "COUNT",
+                    "pattern": "-?\\d+$"
+                }
+            },
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.CategoricalStr",
+                "init_params": {
+                    "column": "NOISE_DISTRIBUTION",
+                    "values": [
+                        "Discrete Gaussian",
+                        "Two-Sided Geometric"
+                    ]
+                }
+            },
+            {
+                "marshalled": true,
+                "class": "tmlt.common.configuration.Unrestricted",
+                "init_params": {
+                    "column": "VARIANCE",
+                    "pattern": "\\d+(\\.\\d+)?$"
+                }
+            }
+        ]
+    }
+}

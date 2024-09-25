@@ -1,0 +1,6 @@
+This test checks the following:
+1. State filtering is being applied. 
+2. MAFID = 100000015 is case with a structural zero - this needs to be filtered out of the result. 
+3. MAFID = {100000014, 100000012} tests the case that a group quarters and non group quarters facility are 
+    located in the same geo. 
+4. The algorithm creates non-private results. 

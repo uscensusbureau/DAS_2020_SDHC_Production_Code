@@ -1,0 +1,16 @@
+REGION_ID,REGION_TYPE,ITERATION_CODE,PH3_DATA_CELL,COUNT,NOISE_DISTRIBUTION,VARIANCE
+1,USA,G,6,15,Two-Sided Geometric,1151.83335
+1,USA,G,10,15,Two-Sided Geometric,1151.83335
+1,USA,G,2,-1,Two-Sided Geometric,1151.83335
+1,USA,C,6,6,Two-Sided Geometric,1151.83335
+1,USA,H,4,3,Two-Sided Geometric,799.83335
+1,USA,*,5,-8,Two-Sided Geometric,1151.83335
+44,STATE,G,6,-11,Two-Sided Geometric,1151.83335
+44,STATE,G,2,15,Two-Sided Geometric,1151.83335
+44,STATE,G,4,20,Two-Sided Geometric,1151.83335
+44,STATE,C,5,-8,Two-Sided Geometric,1151.83335
+44,STATE,C,7,-13,Two-Sided Geometric,1151.83335
+44,STATE,I,5,4,Two-Sided Geometric,1151.83335
+44,STATE,H,5,-15,Two-Sided Geometric,1151.83335
+44,STATE,H,6,4,Two-Sided Geometric,1151.83335
+44,STATE,*,7,-1,Two-Sided Geometric,1151.83335

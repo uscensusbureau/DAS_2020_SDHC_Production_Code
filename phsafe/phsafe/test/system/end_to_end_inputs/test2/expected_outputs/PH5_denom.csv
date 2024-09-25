@@ -1,0 +1,21 @@
+REGION_ID|REGION_TYPE|ITERATION_CODE|PH5_DENOM_DATA_CELL|NOISE_DISTRIBUTION|VARIANCE|COUNT
+06|STATE|*|1|Two-Sided Geometric|0|1
+06|STATE|A|1|Two-Sided Geometric|0|1
+06|STATE|B|1|Two-Sided Geometric|0|0
+06|STATE|C|1|Two-Sided Geometric|0|0
+06|STATE|D|1|Two-Sided Geometric|0|0
+06|STATE|E|1|Two-Sided Geometric|0|0
+06|STATE|F|1|Two-Sided Geometric|0|0
+06|STATE|G|1|Two-Sided Geometric|0|0
+06|STATE|H|1|Two-Sided Geometric|0|0
+06|STATE|I|1|Two-Sided Geometric|0|1
+1|USA|*|1|Two-Sided Geometric|0|1
+1|USA|A|1|Two-Sided Geometric|0|1
+1|USA|B|1|Two-Sided Geometric|0|0
+1|USA|C|1|Two-Sided Geometric|0|0
+1|USA|D|1|Two-Sided Geometric|0|0
+1|USA|E|1|Two-Sided Geometric|0|0
+1|USA|F|1|Two-Sided Geometric|0|0
+1|USA|G|1|Two-Sided Geometric|0|0
+1|USA|H|1|Two-Sided Geometric|0|0
+1|USA|I|1|Two-Sided Geometric|0|1
