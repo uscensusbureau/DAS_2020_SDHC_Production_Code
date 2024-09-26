@@ -1,0 +1,138 @@
+\documentclass{article}
+
+\usepackage{amsmath, amssymb, booktabs}
+
+
+\begin{document}
+
+Summary of the results of Experiment 5, State and National tables.
+
+\section{Count tables}
+
+Tables PH2, PH3, PH4, PH6, PH7
+
+The noisy measurements, \(Z\), are draws from a discrete Gaussian distribution
+with unknown mean, \(Y\), and known variance \(D\), so that
+\begin{equation*}
+  Z = Y + \varepsilon,
+\end{equation*}
+where \(\varepsilon \sim DG(Y, D)\).  Our goal is estimation of the true Census
+count, \(Y\).  For simplicity, in our modeling work, we replace the discrete
+Gaussian distribution with a continuous Gaussian distribution.
+
+Because \(Y\) is a count, we have the logical constraint that \(Y \geq 0\).  We
+can incorporate this information into the model through use of a prior
+distribution.  We use the improper prior
+\begin{equation*}
+  g (Y) \propto I \left( Y \geq 0 \right).
+\end{equation*}
+This results in the posterior distribution
+\begin{equation*}
+  \pi \left( Y \mid Z \right) \propto \exp \left\{ -\frac{1}{2D} \left( Y - Z
+    \right)^2 \right\} I \left( Y \geq 0 \right),
+\end{equation*}
+which is a truncated normal distribution.  The mean of this distribution has a
+closed form representation, but the quantiles need to be estimated numerically.
+
+The advantages of this methodology are
+\begin{itemize}
+  \item Simplicity
+  \item Speed
+  \item Does not require additional auxiliary information
+  \item No possibility of model misspecification
+  \item Produces non-negative estimates
+  \item Gives accurate interval estimates
+\end{itemize}
+
+The disadvantages of this methodology are
+\begin{itemize}
+  \item Does not make use of auxiliary information
+  \item Predictions are not meaningfully different from noisy measurements when
+    the true counts are large
+\end{itemize}
+
+\input{out_count.tex}
+
+
+
+\section{Ratio tables}
+
+Tables PH1, PH5, PH8
+
+The methodology for the ratio tables is similar to that for the count tables.
+We extend what was done for the count tables by modeling the numerator and
+the denominator of the ratios jointly.  Let the subscripts \(num\) and \(den\)
+denote the numerator and denominator, respectively.  We then assume
+\begin{equation*}
+  Z_{num} \sim N \left( Y_{num}, D_{num} \right)
+\end{equation*}
+and
+\begin{equation*}
+  Z_{den} \sim N \left( Y_{den}, D_{den} \right).
+\end{equation*}
+
+We also have the logical constrints
+\begin{itemize}
+  \item \(Y_{den} \geq 1\) (no areas with zero housing units)
+  \item Either \(Y_{num} / Y_{den} \geq 1\) if the universe is households (no
+    vacant housing units) or \(Y_{num} / Y_{den} \geq 2\) if the universe is
+    families
+  \item \(Y_{num} / Y_{den} \leq \kappa\), where \(\kappa\) is the truncation
+    level (taken here to be 10, based on the configuration file)
+\end{itemize}
+These constraints can be summarized with an appropriatey defined matrix
+\(\boldsymbol{D}\) and vectors \(\boldsymbol{a}\) and \(\boldsymbol{b}\), so
+that
+\begin{equation*}
+  \boldsymbol{a} \leq \boldsymbol{D} \boldsymbol{Y} \leq \boldsymbol{b},
+\end{equation*}
+where \(\boldsymbol{Y} = \left( Y_{num}, Y_{den} \right)^\intercal\).  For
+example, for the household ratio tables, we would set
+\begin{equation*}
+  \boldsymbol{a} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \
+  \boldsymbol{b} = \begin{bmatrix} \infty \\ \infty \\ \infty \end{bmatrix}, \
+  \boldsymbol{D} = \begin{bmatrix} 0 & 1 \\ 1 & -1 \\ -1 & \kappa \end{bmatrix}
+\end{equation*}
+
+
+
+We use the improper prior distribution
+\begin{equation*}
+  g ( \boldsymbol{Y} ) \propto I \left( \boldsymbol{a} \leq \boldsymbol{D}
+    \boldsymbol{Y} \leq \boldsymbol{b} \right),
+\end{equation*}
+which results in a posterior distribution
+\begin{equation*}
+  \pi \left( \boldsymbol{Y} \mid \boldsymbol{Z} \right) \propto \exp \left\{
+    -\frac{1}{2} \left( \boldsymbol{Y} - \boldsymbol{Z} \right)^\intercal
+    \boldsymbol{D} \left( \boldsymbol{Y} - \boldsymbol{Z} \right) \right\} I
+    \left( \boldsymbol{a} \leq \boldsymbol{D} \boldsymbol{Y} \leq \boldsymbol{b}
+    \right),
+\end{equation*}
+which is a truncated multivariate normal distribution.  We generate samples from
+this distribution using the {\tt R} package {\tt tmvmixnrom}.
+
+The advantages of this methodology are
+\begin{itemize}
+  \item Simplicity
+  \item Speed
+  \item Does not require additional auxiliary information
+  \item Produces ratios that are bounded between 1 (or 2 for family tables) and
+    the truncation level
+  \item Gives accurate interval estimates for {\em all} ratios
+\end{itemize}
+
+The disadvantages of this methodology are
+\begin{itemize}
+  \item Does not make use of auxiliary information
+  \item Predictions are not meaningfully different from noisy measurements when
+    both the true numerator and denominator are large
+  \item Intervals are not symmetric around the point estimates (although this is
+    not unique to this methodology)
+\end{itemize}
+
+\input{out_ratio.tex}
+
+
+
+\end{document}

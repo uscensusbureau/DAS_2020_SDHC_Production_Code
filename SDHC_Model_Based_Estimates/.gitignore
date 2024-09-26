@@ -1,0 +1,8 @@
+.~*
+*.out
+*.rds
+*.csv
+*.log
+*.aux
+*SUCCESS
+*.Rhistory

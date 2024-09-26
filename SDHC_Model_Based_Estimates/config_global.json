@@ -1,0 +1,13 @@
+{
+    "alpha": 0.05,
+    "exclude_levels": [
+        "TRACT",
+        "PLACE",
+        "BLOCK_GROUP",
+        "AIANNH"
+    ],
+    "iteration_num": 1000000.0,
+    "nm_dir": "nm_inputs/",
+    "seed": 777,
+    "trun": 10
+}
