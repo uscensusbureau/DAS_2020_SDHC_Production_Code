@@ -50,9 +50,6 @@ PATCH and BUILD to 0.
 This is used for the SafeTab and PHSafe CEF Readers, which convert the CEF microdata files into Spark Dataframes that 
 SafeTab and PHSafe use as inputs.
 
-This also contains code that adds variance information to the SafeTab output as a stopgap until SafeTab updates to 
-include variance information, as well as code that stores the CEF data in a record layout format on s3.
-
 SafeTab Documentation for the format of its inputs is here: 
 [SafeTab-H Documentation](../../phsafe/phsafe/PHSafe_Documentation.pdf)
 
