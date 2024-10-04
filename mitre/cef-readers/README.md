@@ -51,7 +51,7 @@ This is used for the SafeTab and PHSafe CEF Readers, which convert the CEF micro
 SafeTab and PHSafe use as inputs.
 
 SafeTab Documentation for the format of its inputs is here: 
-[SafeTab-H Documentation](../../phsafe/phsafe/PHSafe_Documentation.pdf)
+[PHSafe Documentation](../../phsafe/phsafe/PHSafe_Documentation.pdf)
 
 ### Important Files:
 
