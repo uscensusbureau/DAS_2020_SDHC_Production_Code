@@ -31,8 +31,8 @@
 # Usage: Rscript tnormal_ph6.R
 # Return: Model cell count table written to config file location 
 #
-# Author: Ryan Janicki (CSRM)
-# Support: Nate Cady (MITRE) & Nathan Welch (MITRE)
+# Author: ${DEVELOPER} 
+# Support: ${DEVELOPER} 
 # Last Updated: 10 July 2023
 ##############################################################################
 

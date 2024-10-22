@@ -21,4 +21,4 @@ packages = installed.packages()[,"Package"]
 missing.packages = required.packages[!(required.packages %in% packages)]
 
 # install missing packages
-if(length(missing.packages)) install.packages(missing.packages, repos="https://repo.rm.census.gov/repository/DAS-R/bin/amazonlinux2/broken/4.0.2")
+if(length(missing.packages)) install.packages(missing.packages, repos=${DAS_R_REPO_URL}")
