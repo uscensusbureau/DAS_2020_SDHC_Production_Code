@@ -5,8 +5,8 @@
 # Usage: Rscript summarize_results.R
 # Return: Model cell count table written to out_{count, ratio}.tex
 #
-# Author: Ryan Janicki (CSRM)
-# Support: Nathan Welch (MITRE) & Nate Cady (MITRE)
+# Author: ${DEVELOPER} 
+# Support: ${DEVELOPER} 
 # Last Updated: 10 July 2023
 ##############################################################################
 

@@ -13,11 +13,11 @@
 # Usage: source run_models.sh
 # Return: NULL
 #
-# Author: Nathan Welch (MITRE) & Nate Cady (MITRE)
+# Author: ${DEVELOPER} 
 # Last Updated: 10 July 2023
 #
 # Modified:
-#    14 July 2023, Glenn Mitchell
+#    14 July 2023, ${DEVELOPER} 
 #    Line 33, PH${i} to ph${i} in order to match subdirectory names
 ##############################################################################
 
