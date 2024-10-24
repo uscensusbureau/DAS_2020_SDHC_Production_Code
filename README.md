@@ -6,26 +6,35 @@ Characteristics File (S-DHC). Previous source code releases have
 included the code for earlier data releases focused on demographic and
 housing characteristics respectively.
 
-PH-SAFE combines Census survey results of individuals and households
-and infuses them with noise to create *privacy-protected
-tabulations*. The algorithm links information about individuals and
-households and then truncates the resulting table to exclude
-especially large households. This is done because information about
-these households is highly disclosive. Noise is then infused into the
-innermost detail cells of the truncated table. The PH-SAFE code itself
-can be found in the `phsafe` directory of this repository. PH-SAFE was
-built on Tumult's "Analytics" and "Core" platforms, whose source is
-found in the `tumult` subdirectory and makes use of customized CEF
-(Census Edited File) readers implemented by MITRE and included in the
-`mitre` subdirectory. All of these components are implemented in
-Python and the latest version of the platforms can be found at
-[[https://tmlt.dev/]].
+PH-SAFE combines 2020 Census response information for households and
+the individuals within them, infusing those statistics with
+statistical noise to create *privacy-protected tabulations*.
 
-The resulting protected table is then processed by a variety of
-statistical models to remove certain illogical results from the
-noise-infusion, such as negative counts or infinite ratios (whose
-demoninators are 0). The post-processing code can be found in the
-`SDHC_Model_Based_Estimates` subdirectory and is written in R.
+Because information about very large households can be highly
+disclosive, households above a certain size are truncated, removing
+members above the threshold.
+
+The resulting truncated data is used to generate a preliminary
+tabulation of counts and ratios for characteristics (sex, race) of
+household occupants. Noise is then infused into the innermost detail
+cells of the preliminary tables to generate the final output of the
+PH-SAFE algorithm.
+
+The resulting protected table is then statistically post-processed to
+improve accuracy (removing certain illogical results from the
+noise-infusion, such as negative counts or ratios with 0 as the
+denominator) and to produce credible intervals for the resulting
+statistics.
+
+The PH-SAFE code itself can be found in the `phsafe` directory of this
+repository. PH-SAFE was built on Tumult's "Analytics" and "Core"
+platforms, whose source is found in the `tumult` subdirectory and
+makes use of customized CEF (Census Edited File) readers implemented
+by MITRE and included in the `mitre` subdirectory. All of these
+components are implemented in Python and the latest version of the
+platforms can be found at [[https://tmlt.dev/]].  The post-processing
+code can be found in the `SDHC_Model_Based_Estimates` subdirectory and
+is written in R.
 
 In the interests of both transparency and scientific advancement, the
 Census Bureau committed to releasing any source code used in creation
